@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "employee")
-
+@Inheritance(strategy = InheritanceType.JOINED)
  public abstract class Employee implements Payable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

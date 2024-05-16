@@ -17,10 +17,6 @@ public class EmployeesController {
     public EmployeesController(EmployeesService employesService){
         this.employeesService = employesService;
     }
-    @PostMapping
-    public Employee addEmployee(@RequestBody Employee employee) {
-        return employeesService.addEmployee(employee);
-    }
     @GetMapping
     public List<Employee> getAllEmployees() {
         return employeesService.getAllEmployees();
